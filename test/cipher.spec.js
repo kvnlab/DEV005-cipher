@@ -29,6 +29,14 @@ describe('cipher', () => {
       expect(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
     });
 
+    it('should work with lowercase letters', () => {
+      expect(cipher.encode(33, 'abcde')).toBe('HIJKL');
+    });
+
+    it('should omit special chars with lowercase letters', () => {
+      expect(cipher.encode(33, 'abcñde')).toBe('HIJÑKL');
+    });
+
     // Hacker edition
     //
     // [Español]

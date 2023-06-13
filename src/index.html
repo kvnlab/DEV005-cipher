@@ -7,7 +7,29 @@
   </head>
   <body>
     <div id="root">
-      <h1>Hello world!</h1>
+      <h1>Easy encrypt!</h1>
+      <h2>Encode</h2>
+
+      <form id="encode-form">
+        <textarea required name="message" id="encode-message" cols="70" rows="5"></textarea>
+        <br>
+        <button type="submit">Encode</button>
+      </form>
+      <br>
+      Output:
+      <br>
+      <kbd id="encode-output"></kbd>
+      <h2>Decode</h2>
+
+      <form id="decode-form">
+        <textarea required name="message" id="decode-message" cols="70" rows="5"></textarea>
+        <br>
+        <button type="submit">Decode</button>
+      </form>
+      <br>
+      Output:
+      <br>
+      <kbd id="decode-output"></kbd>
     </div>
     <script src="index.js" type="module"></script>
   </body>
